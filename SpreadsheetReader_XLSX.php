@@ -424,7 +424,7 @@
 		{
 			while ($this -> SharedStrings -> read())
 			{
-				if ($this -> SharedStrings -> name == 'sst')
+				if ($this -> SharedStrings -> localName == 'sst')
 				{
 					$this -> SharedStringCount = $this -> SharedStrings -> getAttribute('count');
 					break;
@@ -440,7 +440,7 @@
 			$CacheValue = '';
 			while ($this -> SharedStrings -> read())
 			{
-				switch ($this -> SharedStrings -> name)
+				switch ($this -> SharedStrings -> localName)
 				{
 					case 'si':
 						if ($this -> SharedStrings -> nodeType == XMLReader::END_ELEMENT)
@@ -501,7 +501,7 @@
 			{
 				while ($this -> SharedStrings -> read())
 				{
-					if ($this -> SharedStrings -> name == 'sst')
+					if ($this -> SharedStrings -> localName == 'sst')
 					{
 						$this -> SharedStringCount = $this -> SharedStrings -> getAttribute('uniqueCount');
 						break;
@@ -539,7 +539,7 @@
 					}
 				}
 
-				if ($this -> SharedStrings -> name == 'si')
+				if ($this -> SharedStrings -> localName == 'si')
 				{
 					if ($this -> SharedStrings -> nodeType == XMLReader::END_ELEMENT)
 					{
@@ -573,7 +573,7 @@
 			{
 				while ($this -> SharedStrings -> read())
 				{
-					switch ($this -> SharedStrings -> name)
+					switch ($this -> SharedStrings -> localName)
 					{
 						case 't':
 							if ($this -> SharedStrings -> nodeType == XMLReader::END_ELEMENT)
@@ -994,7 +994,7 @@
 			{
 				while ($this -> Valid = $this -> Worksheet -> read())
 				{
-					if ($this -> Worksheet -> name == 'row')
+					if ($this -> Worksheet -> localName == 'row')
 					{
 						// Getting the row spanning area (stored as e.g., 1:12)
 						// so that the last cells will be present, even if empty
@@ -1031,7 +1031,7 @@
 
 				while ($this -> Valid = $this -> Worksheet -> read())
 				{
-					switch ($this -> Worksheet -> name)
+					switch ($this -> Worksheet -> localName)
 					{
 						// End of row
 						case 'row':
